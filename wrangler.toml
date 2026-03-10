@@ -9,6 +9,6 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "xrynze-db"
-database_id = "isi-id-database-anda-di-sini"
+database_id = "536d94bf-46f6-4de3-8539-708c8838ad57"
 
 # BAGIAN [site] SUDAH DIHAPUS
