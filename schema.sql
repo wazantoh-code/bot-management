@@ -1,6 +1,4 @@
--- ==========================================
---  TABEL PENGGUNA DAN GRUP
--- ==========================================
+
 CREATE TABLE IF NOT EXISTS users (
     user_id INTEGER PRIMARY KEY,
     first_name TEXT NOT NULL,
@@ -19,9 +17,8 @@ CREATE TABLE IF NOT EXISTS chats (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- ==========================================
---  TABEL FILTERS
--- ==========================================
+
+
 CREATE TABLE IF NOT EXISTS filters (
     chat_id INTEGER,
     keyword TEXT,
@@ -33,9 +30,6 @@ CREATE TABLE IF NOT EXISTS filters (
     PRIMARY KEY (chat_id, keyword)
 );
 
--- ==========================================
---  TABEL WELCOME/GREETINGS
--- ==========================================
 CREATE TABLE IF NOT EXISTS welcome_settings (
     chat_id INTEGER PRIMARY KEY,
     should_welcome INTEGER DEFAULT 1,
@@ -61,9 +55,8 @@ CREATE TABLE IF NOT EXISTS verification (
     PRIMARY KEY (chat_id, user_id)
 );
 
--- ==========================================
---  TABEL WARNS (PERINGATAN)
--- ==========================================
+
+
 CREATE TABLE IF NOT EXISTS warn_settings (
     chat_id INTEGER PRIMARY KEY,
     warn_limit INTEGER DEFAULT 3,
@@ -87,9 +80,6 @@ CREATE TABLE IF NOT EXISTS warn_filters (
     PRIMARY KEY (chat_id, keyword)
 );
 
--- ==========================================
---  TABEL NOTES (CATATAN)
--- ==========================================
 CREATE TABLE IF NOT EXISTS notes (
     chat_id INTEGER,
     name TEXT,
@@ -100,17 +90,12 @@ CREATE TABLE IF NOT EXISTS notes (
     PRIMARY KEY (chat_id, name)
 );
 
--- ==========================================
---  TABEL RULES (ATURAN)
--- ==========================================
+
 CREATE TABLE IF NOT EXISTS rules (
     chat_id INTEGER PRIMARY KEY,
     rules_text TEXT
 );
 
--- ==========================================
---  TABEL TOPICS (FORUM)
--- ==========================================
 CREATE TABLE IF NOT EXISTS action_topics (
     chat_id INTEGER PRIMARY KEY,
     topic_id INTEGER,
