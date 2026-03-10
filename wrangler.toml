@@ -1,6 +1,7 @@
 name = "xrynze-bot"
 main = "src/index.js"
-compatibility_date = "2025-01-01"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
 
 # ==========================================
 #  D1 DATABASE BINDING
@@ -11,13 +12,7 @@ database_name = "xrynze-db"
 database_id = "your-database-id-here"  # Ganti dengan ID database Anda
 
 # ==========================================
-#  ENVIRONMENT VARIABLES (Hardcoded di index.js, tidak perlu di sini)
+#  NO STATIC ASSETS - PURE WORKER
 # ==========================================
-# Semua konfigurasi (token, username, owner) sudah ditulis langsung di index.js
-# Tidak perlu disimpan di sini untuk keamanan.
-# Jika ingin menggunakan vars, bisa ditambahkan di bawah:
-# [vars]
-# BOT_TOKEN = "your-token"
-# BOT_USERNAME = "your-bot-username"
-# OWNER_ID = "123456789"
-# SUPPORT_CHAT = "support-chat"
+[site]
+bucket = "."  # Jangan gunakan ini untuk pure worker
