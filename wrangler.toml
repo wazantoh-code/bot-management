@@ -9,10 +9,6 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "xrynze-db"
-database_id = "your-database-id-here"  # Ganti dengan ID database Anda
+database_id = "isi-id-database-anda-di-sini"
 
-# ==========================================
-#  NO STATIC ASSETS - PURE WORKER
-# ==========================================
-[site]
-bucket = "."  # Jangan gunakan ini untuk pure worker
+# BAGIAN [site] SUDAH DIHAPUS
